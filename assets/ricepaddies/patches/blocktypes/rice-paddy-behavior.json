@@ -1,0 +1,38 @@
+[
+	// Rice grows fast on paddies, ~10x slower on regular farmland (10% per tick).
+	{
+		"file": "game:blocktypes/plant/crop/rice.json",
+		"op": "add",
+		"path": "/cropProps/behaviors",
+		"value": [
+			{ "name": "PaddyOnly", "properties": { "poorGrowthChance": 0.10 } }
+		]
+	},
+
+	// Swap BlockCrop for BlockRicePaddyAware so rice seats on the paddy's actual
+	// top Y (collision-box Y2) instead of floating 3/16 above it.
+	{
+		"file": "game:blocktypes/plant/crop/rice.json",
+		"op": "replace",
+		"path": "/class",
+		"value": "BlockRicePaddyAware"
+	},
+
+	// Point rice at its own defaultrice* shapes; flax/rye/spelt keep default*.
+	{
+		"file": "game:blocktypes/plant/crop/rice.json",
+		"op": "replace",
+		"path": "/shape",
+		"value": { "base": "game:block/plant/crop/defaultrice*" }
+	},
+
+	// Swap BlockReeds for BlockReedsPaddyAware so cattails/papyrus/tule seat on
+	// the paddy's actual top Y instead of floating at the water surface.
+	// Falls through to vanilla behavior for all non-paddy ground.
+	{
+		"file": "game:blocktypes/plant/reedpapyrus.json",
+		"op": "replace",
+		"path": "/class",
+		"value": "BlockReedsPaddyAware"
+	}
+]

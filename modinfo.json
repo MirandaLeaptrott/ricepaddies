@@ -1,0 +1,11 @@
+{
+    "type": "code",
+    "modid": "ricepaddies",
+    "name": "Rice Paddies",
+    "description": "Adds rice paddies, a ta-kuwa paddy hoe, and a BFS auto-flood system that keeps paddies irrigated when connected to a natural water source. Rice grows poorly on regular farmland but at full speed on a paddy.",
+    "authors": [ "MiraLeaps" ],
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "*"
+    }
+}

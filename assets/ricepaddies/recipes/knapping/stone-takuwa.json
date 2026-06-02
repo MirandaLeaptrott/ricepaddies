@@ -1,0 +1,13 @@
+{
+	"ingredient": { "type": "item", "code": "game:stone-*", "name": "rock", "allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
+	"pattern": [[
+		"____##____",
+		"____##____",
+		"____##____",
+		"____##____",
+		"____##____",
+		"____##____"
+	]],
+	"name": "Ta-Kuwa",
+	"output": { "type": "item", "code": "ricepaddies:villager-takuwahead-{rock}" }
+}

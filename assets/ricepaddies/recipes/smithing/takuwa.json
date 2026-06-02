@@ -1,0 +1,14 @@
+{
+	"ingredient": { "type": "item", "code": "game:ingot-*", "name": "metal", "allowedVariants": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel" ] },
+	"pattern": [[
+		"__#########_____",
+		"____#_#####_____",
+		"__#########_____"
+	],[
+		"____###____#____",
+		"____#_#____#____",
+		"____###____#____"
+	]],
+	"name": "Ta-Kuwa",
+	"output": { "type": "item", "code": "ricepaddies:villager-takuwahead-{metal}" }
+}

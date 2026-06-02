@@ -1,0 +1,16 @@
+{
+  "item-villager-takuwa-*":              "Ta-Kuwa (paddy hoe)",
+  "item-villager-takuwahead-*":          "Ta-Kuwa Head (paddy hoe head)",
+  "block-paddy-dry-verylow":             "Dry Paddy (Barren)",
+  "block-paddy-dry-low":                 "Dry Paddy (Low Fertility)",
+  "block-paddy-dry-medium":              "Dry Paddy (Medium Fertility)",
+  "block-paddy-dry-compost":             "Dry Paddy (High Fertility)",
+  "block-paddy-dry-high":                "Dry Paddy (Terra preta)",
+  "block-paddy-moist-verylow":           "Flooded Paddy (Barren)",
+  "block-paddy-moist-low":               "Flooded Paddy (Low Fertility)",
+  "block-paddy-moist-medium":            "Flooded Paddy (Medium Fertility)",
+  "block-paddy-moist-compost":           "Flooded Paddy (High Fertility)",
+  "block-paddy-moist-high":              "Flooded Paddy (Terra preta)",
+  "paddy-only-rice":                     "Only rice seeds will take root in a paddy. Cattails, papyrus, and tule may be planted by hand.",
+  "rice-grows-poorly-on-farmland":       "Rice planted outside a paddy will grow poorly. Use a paddy for proper yield."
+}

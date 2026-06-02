@@ -1,0 +1,15 @@
+{
+	"ingredientPattern": "T,S",
+	"ingredients": {
+		"T": { "type": "item", "code": "ricepaddies:villager-takuwahead-*", "name": "metal" },
+		"S": { "type": "item", "code": "game:stick" }
+	},
+	"width": 1,
+	"height": 2,
+	"output": {
+		"type": "item",
+		"code": "ricepaddies:villager-takuwa-{metal}",
+		"quantity": 1,
+		"recipeAttributes": { "applyquenchablebuffs": true }
+	}
+}
