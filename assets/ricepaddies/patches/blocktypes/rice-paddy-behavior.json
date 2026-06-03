@@ -34,5 +34,20 @@
 		"op": "replace",
 		"path": "/class",
 		"value": "BlockReedsPaddyAware"
+	},
+
+	// Swap fruitingbush + cutting classes so cranberry bushes sink 3/16 into a
+	// paddy. Non-cranberry types pass through with zero offset (vanilla behavior).
+	{
+		"file": "game:blocktypes/plant/fruitingbush.json",
+		"op": "replace",
+		"path": "/class",
+		"value": "BlockFruitingBushPaddyAware"
+	},
+	{
+		"file": "game:blocktypes/plant/fruitingbushcutting.json",
+		"op": "add",
+		"path": "/class",
+		"value": "BlockFruitingBushCuttingPaddyAware"
 	}
 ]

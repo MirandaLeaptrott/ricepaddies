@@ -12,5 +12,6 @@
   "block-paddy-moist-compost":           "Flooded Paddy (High Fertility)",
   "block-paddy-moist-high":              "Flooded Paddy (Terra preta)",
   "paddy-only-rice":                     "Only rice seeds will take root in a paddy. Cattails, papyrus, and tule may be planted by hand.",
+  "paddy-only-bog-berries":              "Only bog-native berries will take root here. Try a cranberry or cloudberry cutting.",
   "rice-grows-poorly-on-farmland":       "Rice planted outside a paddy will grow poorly. Use a paddy for proper yield."
 }
