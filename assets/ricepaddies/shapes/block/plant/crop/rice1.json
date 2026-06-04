@@ -1,0 +1,70 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"crop": "game:block/plant/crop/spelt/normal8"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 8.0, 0.0, 8.0 ],
+			"to": [ 8.0, 0.0, 8.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#crop", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [0,0,0,0] },
+				"east": { "texture": "#crop", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [0,0,0,0] },
+				"south": { "texture": "#crop", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [0,0,0,0] },
+				"west": { "texture": "#crop", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [0,0,0,0] },
+				"up": { "texture": "#crop", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [0,0,0,0] },
+				"down": { "texture": "#crop", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "windMode": [0,0,0,0] }
+			},
+			"children": [
+				{
+					"name": "N",
+					"from": [ -5.0, 0.0, -2.0 ],
+					"to": [ 5.0, 16.0, -2.0 ],
+					"shade": false,
+					"rotationOrigin": [ -5.0, 0.0, -4.0 ],
+					"faces": {
+						"south": { "texture": "#crop", "uv": [ 0.0, 0.0, 10.0, 16.0 ], "windMode": [0,0,2,2], "windData": [0,0,1,1] }
+					}
+				},
+				{
+					"name": "S",
+					"from": [ -5.0, 0.0, 2.0 ],
+					"to": [ 5.0, 16.0, 2.0 ],
+					"shade": false,
+					"rotationOrigin": [ -5.0, 0.0, -10.0 ],
+					"faces": {
+						"south": { "texture": "#crop", "uv": [ 0.0, 0.0, 10.0, 16.0 ], "windMode": [0,0,2,2], "windData": [0,0,1,1] }
+					}
+				},
+				{
+					"name": "W",
+					"from": [ -2.0, 0.0, -5.0 ],
+					"to": [ -2.0, 16.0, 5.0 ],
+					"shade": false,
+					"rotationOrigin": [ -5.0, 0.0, -5.0 ],
+					"faces": {
+						"west": { "texture": "#crop", "uv": [ 0.0, 0.0, 10.0, 16.0 ], "windMode": [0,0,2,2], "windData": [0,0,1,1] }
+					}
+				},
+				{
+					"name": "E",
+					"from": [ 2.0, 0.0, -5.0 ],
+					"to": [ 2.0, 16.0, 5.0 ],
+					"shade": false,
+					"rotationOrigin": [ -11.0, 0.0, -5.0 ],
+					"faces": {
+						"west": { "texture": "#crop", "uv": [ 0.0, 0.0, 10.0, 16.0 ], "windMode": [0,0,2,2], "windData": [0,0,1,1] }
+					}
+				}
+			]
+		}
+	]}

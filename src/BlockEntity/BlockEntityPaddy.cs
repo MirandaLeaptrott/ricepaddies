@@ -53,10 +53,47 @@ public class BlockEntityPaddy : BlockEntityFarmland
 		UpdateFarmlandBlock();
 	}
 
-	public void OnNeighborChanged()
+	private bool isClearingIllegalCrop;
+
+	public void OnNeighborChanged(BlockPos neibpos = null)
 	{
 		if (Api?.Side != EnumAppSide.Server) return;
+
+		// Reject illegal crops planted directly above via shift-RC seed bypass.
+		if (neibpos != null && neibpos.X == Pos.X && neibpos.Z == Pos.Z && neibpos.Y == Pos.Y + 1)
+		{
+			TryRejectIllegalCrop(neibpos);
+		}
+
 		Evaluate();
+	}
+
+	private void TryRejectIllegalCrop(BlockPos cropPos)
+	{
+		if (isClearingIllegalCrop) return;
+		Block above = Api.World.BlockAccessor.GetBlock(cropPos);
+		if (above?.Code == null || above.CropProps == null) return;
+
+		// Match by family code (drop the stage suffix): "game:crop-rice-1" -> "game:crop-rice".
+		string fullCode = above.Code.Domain + ":" + above.Code.Path;
+		int lastDash = fullCode.LastIndexOf('-');
+		string family = lastDash > 0 ? fullCode.Substring(0, lastDash) : fullCode;
+		if (RicePaddiesMod.AllowedCrops.Contains(family)) return;
+
+		// Remove the crop and drop the seed so the player isn't penalised.
+		isClearingIllegalCrop = true;
+		Api.World.BlockAccessor.SetBlock(0, cropPos);
+		isClearingIllegalCrop = false;
+
+		string cropType = above.Variant?["type"];
+		if (cropType != null)
+		{
+			Item seedItem = Api.World.GetItem(new AssetLocation(above.Code.Domain, "seeds-" + cropType));
+			if (seedItem != null)
+			{
+				Api.World.SpawnItemEntity(new ItemStack(seedItem), cropPos.ToVec3d().Add(0.5, 0.5, 0.5));
+			}
+		}
 	}
 
 	public override void OnBlockRemoved()

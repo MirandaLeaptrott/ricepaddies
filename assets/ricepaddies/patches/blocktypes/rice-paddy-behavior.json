@@ -18,12 +18,12 @@
 		"value": "BlockRicePaddyAware"
 	},
 
-	// Point rice at its own defaultrice* shapes; flax/rye/spelt keep default*.
+	// Point rice at our own rice* shapes in the ricepaddies domain (not game:) so the default* glob doesn't pick them up for flax/rye/spelt.
 	{
 		"file": "game:blocktypes/plant/crop/rice.json",
 		"op": "replace",
 		"path": "/shape",
-		"value": { "base": "game:block/plant/crop/defaultrice*" }
+		"value": { "base": "ricepaddies:block/plant/crop/rice*" }
 	},
 
 	// Swap BlockReeds for BlockReedsPaddyAware so cattails/papyrus/tule seat on

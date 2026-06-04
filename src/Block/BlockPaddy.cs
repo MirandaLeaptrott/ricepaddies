@@ -76,7 +76,7 @@ public class BlockPaddy : BlockFarmland
 	{
 		base.OnNeighbourBlockChange(world, pos, neibpos);
 
-		// Forward to BE so it re-evaluates BFS reach to a natural water source.
-		world.BlockAccessor.GetBlockEntity<BlockEntityPaddy>(pos)?.OnNeighborChanged();
+		// Forward to BE for BFS water re-eval AND illegal-crop rejection at neibpos.
+		world.BlockAccessor.GetBlockEntity<BlockEntityPaddy>(pos)?.OnNeighborChanged(neibpos);
 	}
 }
